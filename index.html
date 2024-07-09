@@ -48,7 +48,7 @@
             padding: 25px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             border-top: 5px solid;
         }
         .card:hover {
@@ -115,13 +115,13 @@
         <h1>IA y Plataformas: Inteligencia Artificial Nacional Industrial</h1>
         <p style="text-align: center; font-size: 1.2rem;">Ideas para una inteligencia artificial soberana</p>
         
-        <a href="#" id="backBtn" class="back-btn" style="display: none;">← Volver</a>
+        <a href="#" id="backBtn" class="back-btn" style="display: none;" aria-label="Volver">← Volver</a>
 
         <div id="mainView">
             <div class="grid">
-                <div class="card" data-section="reindustrializacion" style="border-color: #3498db;">
+                <div class="card" data-section="reindustrializacion" style="border-color: #3498db;" role="button" aria-expanded="false" aria-controls="reindustrializacion-content">
                     <h3>Reindustrialización y Desarrollo Económico</h3>
-                    <div class="card-content">
+                    <div class="card-content" id="reindustrializacion-content">
                         <ul>
                             <li>Implementación de IA en la Industria</li>
                             <li>Incentivos a la Innovación</li>
@@ -129,9 +129,9 @@
                         </ul>
                     </div>
                 </div>
-                <div class="card" data-section="educacion" style="border-color: #2ecc71;">
+                <div class="card" data-section="educacion" style="border-color: #2ecc71;" role="button" aria-expanded="false" aria-controls="educacion-content">
                     <h3>Educación y Ciencia</h3>
-                    <div class="card-content">
+                    <div class="card-content" id="educacion-content">
                         <ul>
                             <li>Currículo Educativo</li>
                             <li>Centros de Investigación</li>
@@ -139,44 +139,44 @@
                         </ul>
                     </div>
                 </div>
-                <div class="card" data-section="empleo" style="border-color: #e74c3c;">
+                <div class="card" data-section="empleo" style="border-color: #e74c3c;" role="button" aria-expanded="false" aria-controls="empleo-content">
                     <h3>Empleo y Bienestar Social</h3>
-                    <div class="card-content">
+                    <div class="card-content" id="empleo-content">
                         <ul>
                             <li>Nuevo Contrato Social</li>
                             <li>Renta Básica Universal (RBU)</li>
                         </ul>
                     </div>
                 </div>
-                <div class="card" data-section="salud" style="border-color: #9b59b6;">
+                <div class="card" data-section="salud" style="border-color: #9b59b6;" role="button" aria-expanded="false" aria-controls="salud-content">
                     <h3>Vida Saludable y Ambiente</h3>
-                    <div class="card-content">
+                    <div class="card-content" id="salud-content">
                         <ul>
                             <li>IA para la Salud</li>
                             <li>Sostenibilidad Ambiental</li>
                         </ul>
                     </div>
                 </div>
-                <div class="card" data-section="seguridad" style="border-color: #f39c12;">
+                <div class="card" data-section="seguridad" style="border-color: #f39c12;" role="button" aria-expanded="false" aria-controls="seguridad-content">
                     <h3>Política de Seguridad</h3>
-                    <div class="card-content">
+                    <div class="card-content" id="seguridad-content">
                         <ul>
                             <li>Ciberseguridad</li>
                         </ul>
                     </div>
                 </div>
-                <div class="card" data-section="internacional" style="border-color: #1abc9c;">
+                <div class="card" data-section="internacional" style="border-color: #1abc9c;" role="button" aria-expanded="false" aria-controls="internacional-content">
                     <h3>Relaciones Internacionales</h3>
-                    <div class="card-content">
+                    <div class="card-content" id="internacional-content">
                         <ul>
                             <li>Colaboración Regional</li>
                             <li>Soberanía Tecnológica</li>
                         </ul>
                     </div>
                 </div>
-                <div class="card" data-section="infraestructura" style="border-color: #d35400;">
+                <div class="card" data-section="infraestructura" style="border-color: #d35400;" role="button" aria-expanded="false" aria-controls="infraestructura-content">
                     <h3>Infraestructura Tecnológica</h3>
-                    <div class="card-content">
+                    <div class="card-content" id="infraestructura-content">
                         <ul>
                             <li>Conectividad y Acceso</li>
                             <li>Data Center nacional</li>
@@ -184,9 +184,9 @@
                         </ul>
                     </div>
                 </div>
-                <div class="card" data-section="datos" style="border-color: #34495e;">
+                <div class="card" data-section="datos" style="border-color: #34495e;" role="button" aria-expanded="false" aria-controls="datos-content">
                     <h3>Protección de datos</h3>
-                    <div class="card-content">
+                    <div class="card-content" id="datos-content">
                         <ul>
                             <li>Política nacional de protección de datos</li>
                         </ul>
@@ -226,7 +226,29 @@
                 { title: "Centros de Investigación", content: "Crear y financiar centros de investigación especializados en IA, promoviendo la colaboración entre universidades, empresas y gobierno." },
                 { title: "Becas y Programas de Estudio", content: "Ofrecer becas y programas específicos para carreras relacionadas con IA, priorizando estudiantes de menores recursos." }
             ],
-            // ... Añadir detalles para las demás secciones ...
+            empleo: [
+                { title: "Nuevo Contrato Social", content: "Establecer un nuevo contrato social que aborde los desafíos y oportunidades del futuro del trabajo." },
+                { title: "Renta Básica Universal (RBU)", content: "Proponer una renta básica universal para garantizar un nivel de vida mínimo a todos los ciudadanos." }
+            ],
+            salud: [
+                { title: "IA para la Salud", content: "Utilizar IA para mejorar diagnósticos y tratamientos médicos." },
+                { title: "Sostenibilidad Ambiental", content: "Implementar tecnologías sostenibles para proteger el medio ambiente." }
+            ],
+            seguridad: [
+                { title: "Ciberseguridad", content: "Desarrollar políticas y tecnologías para proteger los datos y sistemas informáticos." }
+            ],
+            internacional: [
+                { title: "Colaboración Regional", content: "Fomentar la colaboración con países vecinos en el desarrollo de tecnologías." },
+                { title: "Soberanía Tecnológica", content: "Promover la independencia tecnológica de actores extranjeros." }
+            ],
+            infraestructura: [
+                { title: "Conectividad y Acceso", content: "Mejorar la conectividad y el acceso a Internet en todo el país." },
+                { title: "Data Center nacional", content: "Establecer un centro de datos nacional para almacenar y gestionar información." },
+                { title: "Concurso nacional de APP públicas", content: "Lanzar concursos para el desarrollo de aplicaciones públicas nacionales." }
+            ],
+            datos: [
+                { title: "Política nacional de protección de datos", content: "Desarrollar una política nacional para proteger los datos de los ciudadanos." }
+            ]
         };
 
         cards.forEach(card => {
