@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IA y Plataformas: Inteligencia Artificial Nacional Industrial</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f7fa;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        h1 {
+            font-size: 2.5rem;
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 2rem;
+            color: #34495e;
+            margin-top: 30px;
+        }
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-top: 5px solid;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        .card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+        .card-content {
+            display: none;
+        }
+        .card-content ul {
+            padding-left: 20px;
+            margin-top: 15px;
+        }
+        .card-content li {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        .back-btn {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .back-btn:hover {
+            background-color: #2980b9;
+        }
+        .overview {
+            background-color: #ecf0f1;
+            padding: 25px;
+            border-radius: 12px;
+            margin-top: 40px;
+        }
+        .detail-item {
+            background-color: #f8f9fa;
+            border-left: 5px solid #3498db;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+        .detail-item h4 {
+            margin-top: 0;
+            color: #2c3e50;
+            font-size: 1.3rem;
+        }
+        .detail-item p {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>IA y Plataformas: Inteligencia Artificial Nacional Industrial</h1>
+        <p style="text-align: center; font-size: 1.2rem;">Ideas para una inteligencia artificial soberana</p>
+        
+        <a href="#" id="backBtn" class="back-btn" style="display: none;">← Volver</a>
+
+        <div id="mainView">
+            <div class="grid">
+                <div class="card" data-section="reindustrializacion" style="border-color: #3498db;">
+                    <h3>Reindustrialización y Desarrollo Económico</h3>
+                    <div class="card-content">
+                        <ul>
+                            <li>Implementación de IA en la Industria</li>
+                            <li>Incentivos a la Innovación</li>
+                            <li>Capacitación y Reentrenamiento</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card" data-section="educacion" style="border-color: #2ecc71;">
+                    <h3>Educación y Ciencia</h3>
+                    <div class="card-content">
+                        <ul>
+                            <li>Currículo Educativo</li>
+                            <li>Centros de Investigación</li>
+                            <li>Becas y Programas de Estudio</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card" data-section="empleo" style="border-color: #e74c3c;">
+                    <h3>Empleo y Bienestar Social</h3>
+                    <div class="card-content">
+                        <ul>
+                            <li>Nuevo Contrato Social</li>
+                            <li>Renta Básica Universal (RBU)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card" data-section="salud" style="border-color: #9b59b6;">
+                    <h3>Vida Saludable y Ambiente</h3>
+                    <div class="card-content">
+                        <ul>
+                            <li>IA para la Salud</li>
+                            <li>Sostenibilidad Ambiental</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card" data-section="seguridad" style="border-color: #f39c12;">
+                    <h3>Política de Seguridad</h3>
+                    <div class="card-content">
+                        <ul>
+                            <li>Ciberseguridad</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card" data-section="internacional" style="border-color: #1abc9c;">
+                    <h3>Relaciones Internacionales</h3>
+                    <div class="card-content">
+                        <ul>
+                            <li>Colaboración Regional</li>
+                            <li>Soberanía Tecnológica</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card" data-section="infraestructura" style="border-color: #d35400;">
+                    <h3>Infraestructura Tecnológica</h3>
+                    <div class="card-content">
+                        <ul>
+                            <li>Conectividad y Acceso</li>
+                            <li>Data Center nacional</li>
+                            <li>Concurso nacional de APP públicas</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card" data-section="datos" style="border-color: #34495e;">
+                    <h3>Protección de datos</h3>
+                    <div class="card-content">
+                        <ul>
+                            <li>Política nacional de protección de datos</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="overview">
+                <h2>Visión General</h2>
+                <p>Este dashboard presenta un enfoque integral para el desarrollo de Inteligencia Artificial en Argentina, abarcando aspectos desde la reindustrialización hasta la protección de datos. Cada sección representa un área clave en la implementación de una IA soberana y nacional.</p>
+                <p>Explore cada sección para descubrir las iniciativas y conceptos principales. Este enfoque busca promover el desarrollo tecnológico, la innovación y el bienestar social, manteniendo la soberanía tecnológica y los valores nacionales.</p>
+            </div>
+        </div>
+
+        <div id="detailView" style="display: none;">
+            <h2 id="detailTitle"></h2>
+            <div id="detailContent"></div>
+        </div>
+    </div>
+
+    <script>
+        const cards = document.querySelectorAll('.card');
+        const mainView = document.getElementById('mainView');
+        const detailView = document.getElementById('detailView');
+        const detailTitle = document.getElementById('detailTitle');
+        const detailContent = document.getElementById('detailContent');
+        const backBtn = document.getElementById('backBtn');
+
+        const sectionDetails = {
+            reindustrializacion: [
+                { title: "Implementación de IA en la Industria", content: "Fomentar el uso de tecnologías de IA para optimizar procesos industriales, aumentar eficiencia, generar encadenamientos socioproductivos y reducir costos." },
+                { title: "Incentivos a la Innovación", content: "Proveer incentivos fiscales y subsidios para empresas que integren IA en sus procesos productivos, alineados con la política de soberanía tecnológica." },
+                { title: "Capacitación y Reentrenamiento", content: "Programas de formación para trabajadores en nuevas tecnologías, asegurando que puedan transitar hacia roles que requieran habilidades en IA." }
+            ],
+            educacion: [
+                { title: "Currículo Educativo", content: "Incorporar conocimientos sobre IA y habilidades digitales en todos los niveles educativos." },
+                { title: "Centros de Investigación", content: "Crear y financiar centros de investigación especializados en IA, promoviendo la colaboración entre universidades, empresas y gobierno." },
+                { title: "Becas y Programas de Estudio", content: "Ofrecer becas y programas específicos para carreras relacionadas con IA, priorizando estudiantes de menores recursos." }
+            ],
+            // ... Añadir detalles para las demás secciones ...
+        };
+
+        cards.forEach(card => {
+            card.addEventListener('click', () => {
+                const section = card.getAttribute('data-section');
+                const title = card.querySelector('h3').textContent;
+                const details = sectionDetails[section];
+                
+                detailTitle.textContent = title;
+                detailContent.innerHTML = details.map(detail => `
+                    <div class="detail-item">
+                        <h4>${detail.title}</h4>
+                        <p>${detail.content}</p>
+                    </div>
+                `).join('');
+                
+                mainView.style.display = 'none';
+                detailView.style.display = 'block';
+                backBtn.style.display = 'inline-block';
+            });
+        });
+
+        backBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            mainView.style.display = 'block';
+            detailView.style.display = 'none';
+            backBtn.style.display = 'none';
+        });
+    </script>
+</body>
+</html>
